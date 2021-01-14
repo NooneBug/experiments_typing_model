@@ -1,0 +1,4 @@
+computare quante volte gli antenati sono predetti quando predico un nodo n (antenati predetti (n escluso)/tutti gli antenati di n (n escluso))
+
+regolarizzazione r : figlio - padre if figlio > padre 
+                     0              altrimenti
