@@ -1,7 +1,5 @@
 datasets/*
-lightning_logs/*
 checkpoints/*
 dataloaders/*
-result_logs/*
 experiments/elmo_options/*
 .ipynb_checkpoints/
