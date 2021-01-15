@@ -1,5 +1,5 @@
 from typing_model.runner.base_experimenters import ExperimentRoutine
-from typing_model.runner.BERT_experimenters import ConcatenatedContextBERTTyperExperiment, \
+from typing_model.runner.BERT_experimenters import ConcatenatedContextBERTTyperExperiment,\
     BertHierarchicalExperiment, BertHierarchicalRegularizedExperiment, BertOnlyMentionExperiment, \
         BertOnlyContextExperiment
 from typing_model.runner.Elmo_experimenters import ElmoBaseExperiment
@@ -18,8 +18,9 @@ exp_list = [
                 'exp_name': name,
                 'Dataclass': BaseDataclass,
                 'ExperimentClass': ConcatenatedContextBERTTyperExperiment
-            } for name in ['FineTuningExp1', 'FineTuningExp2', 'FineTuningExp3', 
-                            'FineTuningExp4', 'FineTuningExp5']
+            } for name in ['FineTuningExp1'] 
+            # } for name in ['FineTuningExp1', 'FineTuningExp2', 'FineTuningExp3', 
+                            # 'FineTuningExp4', 'FineTuningExp5']
             # } for name in ['DEFAULT']
             
         ]

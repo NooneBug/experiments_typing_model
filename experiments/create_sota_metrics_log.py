@@ -117,7 +117,6 @@ for mention, context, labels in tqdm(dataloader):
             if admit_void_prediction:
                 void_counter += 1
             else:
-                #BREAK
                 pred_ids = [torch.argmax(pred[i])]
         avg_predictions += len(pred_ids)
 

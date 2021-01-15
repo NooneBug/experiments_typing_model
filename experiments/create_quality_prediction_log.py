@@ -6,21 +6,21 @@ from collections import defaultdict
 import torch
 from tqdm import tqdm
 
-model_path = '../typing_experiments/checkpoints/Balanced_Bert_Baseline-v0.ckpt'
-dataloader_path = '../typing_experiments/dataloaders/Balanced_Bert_Baseline_ontonotes_dev.pkl'
-auxiliary_variables_path =  '../typing_experiments/dataloaders/Bert_Baseline_ontonotes_train_auxiliary_variables.pkl'
+model_path = '../typing_experiments/checkpoints/BBS_bbn-v1.ckpt'
+dataloader_path = '../typing_experiments/dataloaders/Bert_Baseline_bbn_dev.pkl'
+auxiliary_variables_path =  '../typing_experiments/dataloaders/Bert_Baseline_bbn_train_auxiliary_variables.pkl'
 weights_path =  '../typing_experiments/datasets_stats/ontonotes_train_weights.pkl'
 
-train_dataset_stats_path = '../typing_experiments/datasets_stats/ontonotes_train.pkl'
-dev_dataset_stats_path = '../typing_experiments/datasets_stats/balanced_ontonotes_dev.pkl'
+train_dataset_stats_path = '../typing_experiments/datasets_stats/bbn_train.pkl'
+dev_dataset_stats_path = '../typing_experiments/datasets_stats/bbn_dev.pkl'
 
-metrics_file = '../typing_experiments/result_logs/quality_prediction/metrics_BalancedBaselineOntonotes.txt'
+metrics_file = '../typing_experiments/result_logs/quality_prediction/metrics_BBS_bbn.txt'
 
 
 with open(auxiliary_variables_path, 'rb') as filino:
     id2label, label2id, vocab_len = pickle.load(filino)
 with open(weights_path, 'rb') as inp:
-    weights = pickle.load(inp)
+    # weights = pickle.load(inp)
     # ordered_weights = torch.tensor([weights[id2label[i]] for i in range(len(id2label))])    
     ordered_weights = None    
     model = ConcatenatedContextBERTTyper.load_from_checkpoint(model_path, classes = vocab_len, id2label = id2label, label2id = label2id, weights = ordered_weights)
