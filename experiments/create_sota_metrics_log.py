@@ -74,10 +74,8 @@ def check_violation(preds, mode):
         # BREAKPOINT
     return violation_list
 
-with open(auxiliary_variables_path, 'rb') as filino:
-    id2label, label2id, vocab_len = pickle.load(filino)
 with open(weights_path, 'rb') as inp:
-    weights = pickle.load(inp)
+    # weights = pickle.load(inp)
     # ordered_weights = torch.tensor([weights[id2label[i]] for i in range(len(id2label))])    
     ordered_weights = None    
     model = ConcatenatedContextBERTTyper.load_from_checkpoint(model_path, classes = vocab_len, id2label = id2label, label2id = label2id, weights = ordered_weights)

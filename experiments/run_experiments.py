@@ -7,7 +7,7 @@ from typing_model.runner.Elmo_experimenters import ElmoBaseExperiment
 from typing_model.data_models.base_dataclass import BaseDataclass, ElmoDataclass
 
 
-config_file_path = '../typing_experiments/experiments/run_experiments_config.ini'
+config_file_path = 'experiments/run_experiments_config.ini'
 
 # exp_list is a list of experiment configurations: each element has to be a dict with:
 # exp_name: a tag present in the config file at `config_file_path`
