@@ -9,7 +9,8 @@ from typing_model.data_models.base_dataclass import BaseDataclass, ElmoDataclass
 
 # config_file_path = '../typing_experiments/experiments/configs/B_ontonotes.ini'
 # config_file_path = '../typing_experiments/experiments/configs/B_BBN.ini'
-config_file_path = '../typing_experiments/experiments/configs/B_FIGER.ini'
+# config_file_path = '../typing_experiments/experiments/configs/B_FIGER.ini'
+config_file_path = '../typing_experiments/experiments/configs/FT_into_BBN.ini'
 
 # exp_list is a list of experiment configurations: each element has to be a dict with:
 # exp_name: a tag present in the config file at `config_file_path`
@@ -20,9 +21,9 @@ exp_list = [
                 'exp_name': name,
                 'Dataclass': BaseDataclass,
                 'ExperimentClass': ConcatenatedContextBERTTyperExperiment
-            } for name in ['DEFAULT', 'BertFineTuning',
-                            'DEFAULT', 'BertFineTuning',
-                            'DEFAULT', 'BertFineTuning']
+            } for name in ['B_FigerIntoBBN0', 'BF_FigerIntoBBN0',
+                            'B_FigerIntoBBN1', 'BF_FigerIntoBBN0',
+                            'B_FigerIntoBBN2', 'BF_FigerIntoBBN0']
             
         ]
 
