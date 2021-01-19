@@ -1,5 +1,5 @@
 from typing_model.runner.base_experimenters import ExperimentRoutine
-from typing_model.runner.BERT_experimenters import ConcatenatedContextBERTTyperExperiment, \
+from typing_model.runner.BERT_experimenters import ConcatenatedContextBERTTyperExperiment,\
     BertHierarchicalExperiment, BertHierarchicalRegularizedExperiment, BertOnlyMentionExperiment, \
         BertOnlyContextExperiment
 from typing_model.runner.Elmo_experimenters import ElmoBaseExperiment
@@ -7,7 +7,9 @@ from typing_model.runner.Elmo_experimenters import ElmoBaseExperiment
 from typing_model.data_models.base_dataclass import BaseDataclass, ElmoDataclass
 
 
-config_file_path = 'experiments/run_experiments_config.ini'
+# config_file_path = '../typing_experiments/experiments/configs/B_ontonotes.ini'
+# config_file_path = '../typing_experiments/experiments/configs/B_BBN.ini'
+config_file_path = './experiments/configs/B_balanced_ontonotes.ini'
 
 # exp_list is a list of experiment configurations: each element has to be a dict with:
 # exp_name: a tag present in the config file at `config_file_path`
@@ -18,9 +20,9 @@ exp_list = [
                 'exp_name': name,
                 'Dataclass': BaseDataclass,
                 'ExperimentClass': ConcatenatedContextBERTTyperExperiment
-            } for name in ['FineTuningExp1', 'FineTuningExp2', 'FineTuningExp3', 
-                            'FineTuningExp4', 'FineTuningExp5']
-            # } for name in ['DEFAULT']
+            } for name in ['DEFAULT', 'BertFineTuning',
+                            'DEFAULT2', 'BertFineTuning',
+                            'DEFAULT2', 'BertFineTuning']
             
         ]
 
