@@ -23,7 +23,7 @@ exp_list = [
                 'exp_name': name,
                 'Dataclass': BaseDataclass,
                 'ExperimentClass': ConcatenatedContextBERTTyperExperiment
-            } for name in ['B_BalancedOntonotesIntoFIGER0', 'BF_BalancedOntonotesIntoFIGER0',
+            } for name in ['BF_BalancedOntonotesIntoFIGER0',
                             'B_BalancedOntonotesIntoFIGER1', 'BF_BalancedOntonotesIntoFIGER1',
                             'B_BalancedOntonotesIntoFIGER2', 'BF_BalancedOntonotesIntoFIGER2']     
         ]
