@@ -23,9 +23,9 @@ exp_list = [
                 'exp_name': name,
                 'Dataclass': BaseDataclass,
                 'ExperimentClass': ConcatenatedContextBERTTyperExperiment
-            } for name in ['BF_BalancedOntonotesIntoFIGER0',
-                            'B_BalancedOntonotesIntoFIGER1', 'BF_BalancedOntonotesIntoFIGER1',
-                            'B_BalancedOntonotesIntoFIGER2', 'BF_BalancedOntonotesIntoFIGER2']     
+            } for name in ['B_BbnIntoFIGER0', 'BF_BbnIntoFIGER0',
+                            'B_BbnIntoFIGER1', 'BF_BbnIntoFIGER1',
+                            'B_BbnIntoFIGER2', 'BF_BbnIntoFIGER2']     
         ]
 
 exp_routine = ExperimentRoutine(exp_list = exp_list, config_file=config_file_path)
