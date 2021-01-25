@@ -6,15 +6,15 @@ from collections import defaultdict
 import torch
 from tqdm import tqdm
 
-model_path = '../typing_experiments/checkpoints/BBS_bbn-v1.ckpt'
-dataloader_path = '../typing_experiments/dataloaders/Bert_Baseline_bbn_dev.pkl'
-auxiliary_variables_path =  '../typing_experiments/dataloaders/Bert_Baseline_bbn_train_auxiliary_variables.pkl'
+model_path = '../typing_experiments/checkpoints/TL_into_FIGER/BF_bbn/model_0.ckpt'
+dataloader_path = '../typing_experiments/dataloaders/Bert_Baseline_figer_dev.pkl'
+auxiliary_variables_path =  '../typing_experiments/dataloaders/Bert_Baseline_figer_train_auxiliary_variables.pkl'
 weights_path =  '../typing_experiments/datasets_stats/ontonotes_train_weights.pkl'
 
-train_dataset_stats_path = '../typing_experiments/datasets_stats/bbn_train.pkl'
-dev_dataset_stats_path = '../typing_experiments/datasets_stats/bbn_dev.pkl'
+train_dataset_stats_path = '../typing_experiments/datasets_stats/figer_train.pkl'
+dev_dataset_stats_path = '../typing_experiments/datasets_stats/figer_dev.pkl'
 
-metrics_file = '../typing_experiments/result_logs/quality_prediction/metrics_BBS_bbn.txt'
+metrics_file = '../typing_experiments/result_logs/quality_prediction/metrics_figer.txt'
 
 
 with open(auxiliary_variables_path, 'rb') as filino:

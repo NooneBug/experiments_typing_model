@@ -9,13 +9,13 @@ import numpy as np
 from typing_model.losses.hierarchical_losses import HierarchicalLoss
 
 
-model_path = 'checkpoints/TL_into_FIGER/BF_bbn/model_2.ckpt'
-dataloader_path = 'dataloaders/Bert_Baseline_figer_dev.pkl'
+model_path = 'checkpoints/TL_into_Balanced_ontonotes/BF_FIGER/model_2.ckpt'
+dataloader_path = 'dataloaders/Bert_balanced_ontonotes_dev.pkl'
 
-auxiliary_variables_path =  'dataloaders/Bert_Baseline_figer_train_auxiliary_variables.pkl'
+auxiliary_variables_path =  'dataloaders/Bert_balanced_ontonotes_train_auxiliary_variables.pkl'
 weights_path =  'datasets_stats/ontonotes_train_weights.pkl'
 
-metrics_file = 'result_logs/quality_prediction/TL_into_FIGER/sota_BF_BBN.txt'
+metrics_file = 'result_logs/quality_prediction/TL_into_Balanced_Ontonotes/sota_BF_Figer.txt'
 
 hierarchy_metrics = False
 admit_void_prediction = False
@@ -129,7 +129,10 @@ for mention, context, labels in tqdm(dataloader):
         ex_labels = []
         labels_ids = m.nonzero()
         for l in labels_ids:
-            ex_labels.append(id2label[l.item()])
+            try:
+                ex_labels.append(id2label[l.item()])
+            except:
+                print('out_of_vocabulary')
         batch_labels.append(ex_labels)
     all_labels.extend(batch_labels)
 
