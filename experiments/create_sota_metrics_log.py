@@ -9,13 +9,13 @@ import numpy as np
 from typing_model.losses.hierarchical_losses import HierarchicalLoss
 
 
-model_path = 'checkpoints/TL_into_Balanced_ontonotes/B_BBN/model_1.ckpt'
-dataloader_path = 'dataloaders/Bert_balanced_ontonotes_dev.pkl'
+model_path = 'checkpoints/TL_into_Ontonotes/BF_BBN/model_2.ckpt'
+dataloader_path = 'dataloaders/Bert_Baseline_ontonotes_dev.pkl'
 
-auxiliary_variables_path =  'dataloaders/Bert_balanced_ontonotes_train_auxiliary_variables.pkl'
+auxiliary_variables_path =  'dataloaders/Bert_Baseline_ontonotes_train_auxiliary_variables.pkl'
 weights_path =  'datasets_stats/ontonotes_train_weights.pkl'
 
-metrics_file = 'result_logs/quality_prediction/TL_into_Balanced_Ontonotes/sota_B_BBN.txt'
+metrics_file = 'result_logs/quality_prediction/TL_into_Ontonotes/sota_BF_BBN.txt'
 
 hierarchy_metrics = False
 admit_void_prediction = False

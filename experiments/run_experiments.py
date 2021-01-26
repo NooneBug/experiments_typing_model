@@ -13,7 +13,8 @@ from typing_model.data_models.base_dataclass import BaseDataclass, ElmoDataclass
 # config_file_path = './experiments/configs/B_FIGER.ini'
 # config_file_path = './experiments/configs/FT_into_FIGER.ini'
 # config_file_path = './experiments/configs/FT_into_Balanced_Ontonotes.ini'
-config_file_path = './experiments/configs/FT_into_Ontonotes.ini'
+# config_file_path = './experiments/configs/FT_into_Ontonotes.ini'
+config_file_path = './experiments/configs/FT_into_BBN.ini'
 
 # exp_list is a list of experiment configurations: each element has to be a dict with:
 # exp_name: a tag present in the config file at `config_file_path`
@@ -24,9 +25,9 @@ exp_list = [
                 'exp_name': name,
                 'Dataclass': BaseDataclass,
                 'ExperimentClass': ConcatenatedContextBERTTyperExperiment
-            } for name in ['B_BbnIntoOntontonotes0', 'BF_BbnIntoOntontonotes0',
-                            'B_BbnIntoOntontonotes1', 'BF_BbnIntoOntontonotes1',
-                            'B_BbnIntoOntontonotes2', 'BF_BbnIntoOntontonotes2']     
+            } for name in ['B_OntonotesIntoBBN0', 'BF_OntonotesIntoBBN0'
+                           'B_OntonotesIntoBBN1', 'BF_OntonotesIntoBBN1',
+                           'B_OntonotesIntoBBN2', 'BF_OntonotesIntoBBN2']     
         ]
 
 exp_routine = ExperimentRoutine(exp_list = exp_list, config_file=config_file_path)
