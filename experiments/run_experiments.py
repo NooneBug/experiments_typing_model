@@ -14,6 +14,7 @@ from typing_model.data_models.base_dataclass import BaseDataclass, ElmoDataclass
 config_file_path = './experiments/configs/FT_into_FIGER.ini'
 # config_file_path = './experiments/configs/FT_into_Balanced_Ontonotes.ini'
 # config_file_path = './experiments/configs/FT_into_Ontonotes.ini'
+# config_file_path = './experiments/configs/FT_into_BBN.ini'
 
 # exp_list is a list of experiment configurations: each element has to be a dict with:
 # exp_name: a tag present in the config file at `config_file_path`
